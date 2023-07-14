@@ -11,6 +11,7 @@
 		728E298A2A617B560031F7F3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728E29892A617B560031F7F3 /* ContentView.swift */; };
 		728E298C2A617B570031F7F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 728E298B2A617B570031F7F3 /* Assets.xcassets */; };
 		728E298F2A617B570031F7F3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 728E298E2A617B570031F7F3 /* Preview Assets.xcassets */; };
+		728E29972A618EEB0031F7F3 /* CharacterServiceResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728E29962A618EEB0031F7F3 /* CharacterServiceResult.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		728E29892A617B560031F7F3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		728E298B2A617B570031F7F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		728E298E2A617B570031F7F3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		728E29962A618EEB0031F7F3 /* CharacterServiceResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterServiceResult.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				728E29872A617B560031F7F3 /* RickAndMortyCharactersApp.swift */,
 				728E29892A617B560031F7F3 /* ContentView.swift */,
+				728E29952A618ED10031F7F3 /* Model */,
 				728E298B2A617B570031F7F3 /* Assets.xcassets */,
 				728E298D2A617B570031F7F3 /* Preview Content */,
 			);
@@ -65,6 +68,14 @@
 				728E298E2A617B570031F7F3 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		728E29952A618ED10031F7F3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				728E29962A618EEB0031F7F3 /* CharacterServiceResult.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +150,7 @@
 			files = (
 				728E298A2A617B560031F7F3 /* ContentView.swift in Sources */,
 				728E29882A617B560031F7F3 /* RickAndMortyCharactersApp.swift in Sources */,
+				728E29972A618EEB0031F7F3 /* CharacterServiceResult.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
