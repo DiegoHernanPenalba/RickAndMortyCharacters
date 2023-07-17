@@ -20,6 +20,13 @@ struct ContentView: View {
                 List {
                     ForEach(data, id: \.id) { character in
                         Text(character.name)
+                        AsyncImage(url: URL(string: character.image)){ image in
+                            image
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                        } placeholder: {
+                            ProgressView()
+                        }
                     }
                     
                     .navigationTitle("Characters")
