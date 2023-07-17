@@ -21,9 +21,9 @@ struct ContentView: View {
                     ForEach(data, id: \.id) { character in
                         Text(character.name)
                     }
+                    
+                    .navigationTitle("Characters")
                 }
-                .navigationBarTitle("Characters")
-                
                 
             case .loading:
                 ProgressView()
