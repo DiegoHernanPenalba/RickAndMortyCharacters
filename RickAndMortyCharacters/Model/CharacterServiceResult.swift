@@ -8,7 +8,7 @@
 import Foundation
 
 struct CharacterServiceResult: Codable {
-    let result : [Character]
+    let results : [Character]
     
 }
 

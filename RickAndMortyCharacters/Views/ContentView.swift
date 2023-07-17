@@ -8,14 +8,47 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @StateObject private var viewModel = CharacterViewModel(service: CharacterService())
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        NavigationView {
+            
+            switch viewModel.state {
+                
+            case .succes(let data):
+                List {
+                    ForEach(data, id: \.id) { character in
+                        Text(character.name)
+                    }
+                }
+                .navigationBarTitle("Characters")
+                
+                
+            case .loading:
+                ProgressView()
+                
+            default:
+                EmptyView()
+            }
         }
-        .padding()
+        .task {
+            await viewModel.getCharacters()
+        }
+        .alert("Error",
+               isPresented: $viewModel.hasError,
+               presenting: viewModel.state) { detail in
+            
+            Button("Retry") {
+                Task {
+                    await viewModel.getCharacters()
+                }
+            }
+        } message: { detail in
+            if case let .failed(error) = detail {
+                Text(error.localizedDescription)
+            }
+        }
     }
 }
 

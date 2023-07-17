@@ -21,7 +21,7 @@ struct CharacterService {
         
         let decodedData = try JSONDecoder().decode(CharacterServiceResult.self, from: data)
         
-        return decodedData.result
+        return decodedData.results
     }
     
     enum CharacterServiceError: Error {
